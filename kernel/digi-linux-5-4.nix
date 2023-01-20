@@ -1,9 +1,10 @@
 { config, lib, pkgs, ... }@args:
 with lib;
-pkgs.buildLinux (args // rec {
+pkgs.linuxManualConfig {
   version = "5.4.84";
 
-  defconfig = "ccimx8_defconfig";
+  #defconfig = "ccimx8_defconfig";
+  configfile = ./ccimx8_defconfig;
 
   src = pkgs.applyPatches {
 
@@ -49,9 +50,8 @@ pkgs.buildLinux (args // rec {
     '';
   };
 
-  autoModules = false;
-  extraConfig = ''
-  '';
+  #autoModules = false;
 
   kernelPatches = [];
-} // (args.argsOverride or {}))
+  allowImportFromDerivation = true;
+}
