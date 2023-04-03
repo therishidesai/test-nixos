@@ -25,7 +25,7 @@
 
           boot.kernelPatches = [{
             name = "can-modules";
-            patch = null;
+            patch = ./i-dont-exist;
             extraConfig = ''
               CAN_J1939 y
             '';
