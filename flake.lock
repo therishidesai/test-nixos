@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "jetpack-nixos": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1680135281,
+        "narHash": "sha256-pzDPO56G7nX4YCbES9FdbyOo7kUPYLrsPHyVsCywnQY=",
+        "owner": "anduril",
+        "repo": "jetpack-nixos",
+        "rev": "ca41fd165df90270c41aabe8d3febb2bde39ef63",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anduril",
+        "repo": "jetpack-nixos",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1674120619,
@@ -17,6 +37,7 @@
     },
     "root": {
       "inputs": {
+        "jetpack-nixos": "jetpack-nixos",
         "nixpkgs": "nixpkgs"
       }
     }
